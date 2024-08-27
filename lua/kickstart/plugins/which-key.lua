@@ -12,7 +12,7 @@
 -- Then, because we use the `config` key, the configuration only runs
 -- after the plugin has been loaded:
 --  config = function() ... end
-
+--
 return {
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
@@ -54,7 +54,6 @@ return {
           F12 = '<F12>',
         },
       },
-
       -- Document existing key chains
       spec = {
         { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },

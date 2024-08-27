@@ -7,7 +7,7 @@
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -19,9 +19,9 @@ vim.opt.showmode = false
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
+-- vim.schedule(function()
+--   vim.opt.clipboard = 'unnamedplus'
+-- end)
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -61,5 +61,24 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- views can only be fully collapsed with the global statusline
+vim.opt.laststatus = 3
+-- Default splitting will cause your main splits to jump when opening an edgebar.
+-- To prevent this, set `splitkeep` to either `screen` or `topline`.
+vim.opt.splitkeep = 'screen'
+
+-- Obsidian requirement
+vim.o.conceallevel = 1
+
+-- Set highlight on search, but clear on pressing <jk> in normal mode
+-- vim.opt.hlsearch = true
+vim.keymap.set('n', 'jk', '<cmd>nohlsearch<CR>')
+
+--  This is useful for when you want to exit insert mode, without having to press <Esc> twice
+vim.keymap.set('i', 'jk', '<Esc>')
+
+-- This is usefule for when you want to exit visual mode, without having to press <Esc> twice
+vim.keymap.set('v', 'jk', '<Esc>')
 
 -- vim: ts=2 sts=2 sw=2 et
