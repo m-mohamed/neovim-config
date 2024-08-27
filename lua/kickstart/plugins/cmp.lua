@@ -34,6 +34,8 @@ return {
       --  into multiple repos for maintenance purposes.
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
+      -- Add Supermaven as a dependency if needed
+      'supermaven-inc/supermaven-nvim',
     },
     config = function()
       -- See `:help cmp`
@@ -110,6 +112,7 @@ return {
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
+          { name = 'supermaven' }, -- Add Supermaven as a source
         },
       }
     end,
