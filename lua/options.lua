@@ -70,6 +70,11 @@ vim.opt.splitkeep = 'screen'
 -- Obsidian requirement
 vim.o.conceallevel = 1
 
+-- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
+-- instead raise a dialog asking if you wish to save the current file(s)
+-- See `:help 'confirm'`
+vim.opt.confirm = true  -- Added from upstream
+
 -- Set highlight on search, but clear on pressing <jk> in normal mode
 -- vim.opt.hlsearch = true
 vim.keymap.set('n', 'jk', '<cmd>nohlsearch<CR>')
@@ -79,5 +84,4 @@ vim.keymap.set('i', 'jk', '<Esc>')
 
 -- This is usefule for when you want to exit visual mode, without having to press <Esc> twice
 vim.keymap.set('v', 'jk', '<Esc>')
-
 -- vim: ts=2 sts=2 sw=2 et

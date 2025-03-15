@@ -36,6 +36,7 @@ return {
       'hrsh7th/cmp-path',
       -- Add Supermaven as a dependency if needed
       'supermaven-inc/supermaven-nvim',
+      'hrsh7th/cmp-nvim-lsp-signature-help',
     },
     config = function()
       -- See `:help cmp`
@@ -113,6 +114,7 @@ return {
           { name = 'luasnip' },
           { name = 'path' },
           { name = 'supermaven' }, -- Add Supermaven as a source
+          { name = 'nvim_lsp_signature_help' },
         },
       }
     end,
